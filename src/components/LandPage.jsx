@@ -48,31 +48,43 @@ function LandPage() {
 
     }
 
-    let roots = Algebrite.run(`roots(${functionEval})`);
+    let iterations = 0;
+    const maxIterations = 100;
 
-    const rootsArray = roots
-      .replace(/[\[\]]/g, "")
-      .split(",");
-
-    const hasRealRoot = rootsArray.some(root => !root.includes("i"));
-
-    if (!hasRealRoot) {
-      errorHandler.current = {
-        state: true,
-        code: "La función ingresada no posee raíces reales"
-      };
-
-      setErrorHelper(prev => prev + 1);
-      return;
-    }
-
-    while (math.abs(math.evaluate(functionEval, { x: Xnr_calc })) > 0.000000001) {
+    while (math.abs(math.evaluate(functionEval, { x: Xnr_calc })) > 0.000000001 && iterations < maxIterations) {
 
       Xnr_calc = est_newraph(Xnr_calc)
+      iterations++
 
-    } 
+    }
+
+    if (iterations === maxIterations) {
+
+      errorHandler.current = {
+        state: true,
+        code: "El método no convergió en 100 iteraciones"
+      }
+
+      setErrorHelper(prev => prev + 1)
+      return
+
+    }
+
+    if(isNaN(Xnr_calc) || !isFinite(Xnr_calc)) {
+
+        errorHandler.current = {
+        state: true,
+        code: "El método no convergió en 100 iteraciones"
+      }
+
+      setErrorHelper(prev => prev + 1)
+      return
+
+    } else {
 
     setRootResult(Number(Xnr_calc.toFixed(9)).toString())
+
+    }
 
     console.log(Xnr_calc)
 

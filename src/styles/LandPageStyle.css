@@ -1,7 +1,7 @@
 .MainLand {
 
     background-color: black;
-    background-image: url("./public/backvid.gif");
+    background-image: url("/backvid.gif");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
