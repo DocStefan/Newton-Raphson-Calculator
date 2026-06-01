@@ -1,0 +1,300 @@
+.MainLand {
+
+    background-color: black;
+    background-image: url("./public/backvid.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.MainContainer {
+
+    height: 100%;
+    width: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    z-index: 10;
+
+}
+
+.MainTittle {
+
+    color: white;
+    font-family: "Roboto Slab", system-ui;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 45px;
+    font-weight: 350;
+
+    /* background-color: red; */
+
+
+}
+
+.MainInputs {
+
+    width: 100%;
+    height: 680px;
+
+    /* background-color: antiquewhite; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.InputsTexts {
+
+    font-family: "Roboto Slab", system-ui;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 30px;
+    font-weight: 330;
+    color: white;
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.CalcInputs {
+
+    border: 2.5px solid white;
+    border-radius: 25px;
+    padding: 0px 0px 0px 15px;
+    font-size: 16px;
+
+    width: 300px;
+    height: 50px;
+
+
+    background-color: rgb(255, 255, 255, 0);
+    color: white;
+
+    font-family: "Roboto Slab", system-ui;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 25px;
+
+    appearance: none;
+    margin: 0;
+
+}
+
+.CalcInputs:focus {
+
+    outline: none;
+
+}
+
+.CalcButton {
+
+    border: 2.5px solid white;
+    border-radius: 30px;
+    font-size: 25px;
+
+    width: 200px;
+    height: 60px;
+
+
+    background-color: rgb(255, 255, 255, 0);
+    color: white;
+
+    font-family: "Roboto Slab", system-ui;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 25px;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+.CalcButton:focus {
+
+    outline: none;
+
+}
+
+.CalcButton:hover {
+
+    background-color: white;
+    opacity: 0.8;
+    color: black;
+
+}
+
+.FinalRoot {
+
+    font-family: "Roboto Slab", system-ui;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 23px;
+    font-weight: 400;
+    color: rgb(255, 255, 255, 0.9);
+    height: 100px;
+
+}
+
+.ErrorContainer {
+
+    width: 100%;
+    height: 100px;
+
+    /* background-color: blue; */
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+
+}
+
+.ErrorBox {
+
+    width: auto;
+    height: 80%;
+    background-color: rgb(255, 0, 0, 0.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: solid 2px red;
+
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+
+}
+
+.Error {
+
+    font-family: "Roboto Slab", system-ui;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 23px;
+    font-weight: 400;
+    color: rgb(255, 255, 255, 0.9);
+
+}
+
+.fotoLogo {
+
+    position: fixed;
+    z-index: 0;
+
+    bottom: 0px;
+    right: 0px;
+
+    width: 550px;
+
+    object-fit: contain;
+
+}
+
+@media (min-width: 1001px) and (max-width: 1500px) {
+
+    .fotoLogo {
+
+        width: 300px;
+
+    }
+
+}
+
+@media (min-width: 601px) and (max-width: 1000px) {
+
+    .MainTittle {
+
+        font-size: 40px;
+
+    }
+
+    .fotoLogo {
+
+        width: 300px;
+
+    }
+
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+
+    .MainTittle {
+
+        font-size: 22.5px;
+        text-align: center;
+
+    }
+
+    .InputsTexts {
+
+        font-size: 20px;
+
+    }
+
+    .CalcInputs {
+
+        font-size: 20px;
+        width: 55%;
+
+    }
+
+    .CalcButton {
+
+        border-radius: 30px;
+        font-size: 19px;
+
+        width: 140px;
+        height: 60px;
+
+    }
+
+    .FinalRoot {
+
+        font-size: 20px;
+        text-align: center;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+
+    .ErrorBox {
+
+        width: 80%;
+        height: 80%;
+
+        padding-left: 5px;
+        padding-right: 5px;
+
+        text-align: center;
+
+    }
+
+    .Error {
+
+        font-size: 20px;
+
+    }
+
+    .fotoLogo {
+
+        width: 300px;
+
+    }
+
+}
